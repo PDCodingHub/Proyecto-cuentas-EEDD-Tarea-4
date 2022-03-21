@@ -1,3 +1,9 @@
+/**
+ * Esta clase se encarga de operar con las cuentas bancarias: crearlas y proceder a sus ingresos y retiradas de saldo.
+ * @version "11.0.9" 2020-10-20 LTS
+ * @author Pablo Daniel Porcó Molina
+ */
+
 package cuentas;
 
 import java.util.Scanner;
@@ -28,6 +34,17 @@ public class Main {
         operativaCuenta(cuenta1, cantidadRetirar, cantidadIngresar);
     }
 
+    /**
+     * Se encarga de realizar las operaciones de ingreso y retirada en cuenta:
+     * Recibe una cuenta, una cantidad a retirar y una cantidad a ingresar por parámetros y a realizar las operaciones:
+     * Primero intenta retirar la cantidad especificada según las condiciones del método retirar() de la clase CCuenta
+     * En caso que no consiga retirar el dinero, lanza un mensaje por pantalla
+     * Tras realizar la primera sentencia, procede a ingresar la cantidad especificada según las condiciones impuestas en el método ingresar() de la clase CCuenta
+     * En caso que no consiga ingresar el dinero, lanza un mensaje por pantalla
+     * @param cuenta1 es la cuenta de la que se obtendrá el saldo
+     * @param cantidadRetirar es la cantidad que se pretende retirar
+     * @param cantidadIngresar es la cantidad que se pretende ingresar
+     */
     public static void operativaCuenta(CCuenta cuenta1, float cantidadRetirar, float cantidadIngresar) {
         // Retirada
         try {
